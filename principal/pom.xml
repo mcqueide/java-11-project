@@ -44,6 +44,16 @@
 			<artifactId>dozer-jdk8-support</artifactId>
 		</dependency>
 
+    <dependency>
+      <groupId>br.com.arqdev</groupId>
+      <artifactId>util</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>br.com.arqdev</groupId>
+      <artifactId>pessoa</artifactId>
+    </dependency>
+
 	</dependencies>
 
 	<build>
