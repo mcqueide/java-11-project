@@ -58,18 +58,6 @@
       <artifactId>spring-boot-starter-validation</artifactId>
     </dependency>
 
-    <!--flyway-->
-    <dependency>
-      <groupId>org.flywaydb</groupId>
-      <artifactId>flyway-core</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>io.craftsman</groupId>
-      <artifactId>dozer-jdk8-support</artifactId>
-      <version>1.0.6</version>
-    </dependency>
-
     <!--lombok-->
     <dependency>
       <groupId>org.projectlombok</groupId>

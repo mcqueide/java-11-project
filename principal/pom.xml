@@ -41,7 +41,37 @@
       <groupId>io.craftsman</groupId>
       <artifactId>dozer-jdk8-support</artifactId>
     </dependency>
-    
+
+    <dependency>
+      <groupId>br.com.arqdev</groupId>
+      <artifactId>util</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>br.com.arqdev</groupId>
+      <artifactId>pessoa</artifactId>
+    </dependency>
+
   </dependencies>
   
+	<build>
+		<plugins>
+			<!--spring-boot -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+		            <skip>false</skip>
+		        </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>

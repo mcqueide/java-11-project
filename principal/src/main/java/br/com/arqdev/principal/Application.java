@@ -10,7 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+            "br.com.arqdev.pessoa",
+            "br.com.arqdev.util"
+        })
 public class Application {
 
     public static void main(String[] args) {
