@@ -14,18 +14,18 @@ import br.com.arqdev.util.Conversor;
 @Service
 public class PessoaServico {
 
-	@Autowired
-	private PessoaRepository repository;
-	
-	@Autowired
-	private Conversor conversor;
-	
-	public Optional<PessoaDto> obtemPessoa(Integer id) {
-		return repository.findById(id).map(p -> conversor.converter(p, PessoaDto.class));
-	}
-	
-	public List<PessoaDto> obtemPessoas() {
-		return repository.findAll().stream().map(p -> conversor.converter(p, PessoaDto.class)).collect(Collectors.toList());
-	}
-	
+    @Autowired
+    private PessoaRepository repository;
+
+    @Autowired
+    private Conversor conversor;
+
+    public Optional<PessoaDto> obtemPessoa(Integer id) {
+        return repository.findById(id).map(p -> conversor.converter(p, PessoaDto.class));
+    }
+
+    public List<PessoaDto> obtemPessoas() {
+        return repository.findAll().stream().map(p -> conversor.converter(p, PessoaDto.class)).collect(Collectors.toList());
+    }
+
 }

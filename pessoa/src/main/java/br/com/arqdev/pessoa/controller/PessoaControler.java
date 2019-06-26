@@ -17,16 +17,16 @@ import br.com.arqdev.pessoa.service.PessoaServico;
 @RequestMapping("pessoa")
 public class PessoaControler {
 
-	@Autowired
-	private PessoaServico servico;
-	
-	@GetMapping
-	public List<PessoaDto> obtemPessoas() {
-		return servico.obtemPessoas();
-	}
-	
-	@GetMapping("{id}")
-	public Optional<PessoaDto> obtemPessoa(@PathVariable(value = "id") Integer id) {
-		return servico.obtemPessoa(id);
-	}
+    @Autowired
+    private PessoaServico servico;
+
+    @GetMapping
+    public List<PessoaDto> obtemPessoas() {
+        return servico.obtemPessoas();
+    }
+
+    @GetMapping("{id}")
+    public Optional<PessoaDto> obtemPessoa(@PathVariable(value = "id") Integer id) {
+        return servico.obtemPessoa(id);
+    }
 }

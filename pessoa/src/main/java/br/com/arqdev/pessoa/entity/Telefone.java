@@ -23,13 +23,13 @@ import lombok.Setter;
 @Builder
 public class Telefone {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
-	
-	private String numero;
-	
-	@ManyToOne
-	@JoinColumn(name="pessoa_id", referencedColumnName="id")
-	private Pessoa pessoa;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
+
+    private String numero;
+
+    @ManyToOne
+    @JoinColumn(name="pessoa_id", referencedColumnName="id")
+    private Pessoa pessoa;
 }

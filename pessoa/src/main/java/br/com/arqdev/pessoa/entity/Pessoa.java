@@ -28,16 +28,15 @@ import lombok.Setter;
 @Builder
 public class Pessoa {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
-	
-	private String nome;
-	
-	@Column(name="data_nascimento")
-	private LocalDate dataNascimento;
-	
-	@OneToMany(mappedBy="pessoa", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
-	private List<Telefone> telefones;
-	
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
+
+    private String nome;
+
+    @Column(name="data_nascimento")
+    private LocalDate dataNascimento;
+
+    @OneToMany(mappedBy="pessoa", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Telefone> telefones;
 }

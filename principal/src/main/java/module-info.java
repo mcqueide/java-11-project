@@ -1,13 +1,11 @@
 module br.com.arqdev.principal {
-	requires spring.boot;
-	requires spring.boot.autoconfigure;
-	requires spring.context;
-	requires dozer;
+    requires spring.boot;
+    requires spring.boot.autoconfigure;
+    requires spring.context;
+    requires dozer;
 
-	requires br.com.arqdev.pessoa;
-	requires br.com.arqdev.util;
+    requires br.com.arqdev.pessoa;
+    requires br.com.arqdev.util;
 
-	exports br.com.arqdev.principal;
-	
-	opens br.com.arqdev.principal;
+    exports br.com.arqdev.principal;
 }

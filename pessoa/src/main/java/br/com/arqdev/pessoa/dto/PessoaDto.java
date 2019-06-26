@@ -15,9 +15,9 @@ import lombok.Setter;
 @Setter
 public class PessoaDto {
 
-	private Integer id;
-	private String nome;
-	@JsonFormat(pattern = "dd/MM/yyyy")
+    private Integer id;
+    private String nome;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
-	private List<TelefoneDto> telefones;
+    private List<TelefoneDto> telefones;
 }
