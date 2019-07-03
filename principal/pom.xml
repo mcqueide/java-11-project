@@ -60,7 +60,7 @@
           <skip>false</skip>
         </configuration>
       </plugin>
-    </plugins>
+     </plugins>
   </build>
 
 </project>

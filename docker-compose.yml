@@ -1,9 +1,30 @@
-version: '3'
+version: '2.1'
+
+networks:
+  test:
+
 services:
-  mysql:
-    image: mysql
-    container_name: mysql_arq_dev_java_11_project
+  app:
+    image: java-11-project-cesar
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - test
+    command: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=0.0.0.0:5005 -Djava.security.egd=file:/dev/./urandom -jar /project/principal-1.0-SNAPSHOT.jar
+
+  db:
+    image: opavlova/db-mysql:5.7-test
+    container_name: db
     ports:
       - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+          test: ["CMD", "mysql", "-h", "localhost", "-P", "3306", "-u", "root", "--password=root", "-e", "select 1", "DOCKERDB"]
+          interval: 1s
+          timeout: 3s
+          retries: 30
+    networks:
+      - test
