@@ -14,4 +14,6 @@ module br.com.arqdev.pessoa {
 	requires br.com.arqdev.util;
 
 	exports br.com.arqdev.pessoa;
+
+	exports br.com.arqdev.pessoa.entity to br.com.arqdev.autenticacao;
 }

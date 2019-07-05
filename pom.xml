@@ -213,6 +213,7 @@
     <module>pessoa</module>
     <module>util</module>
     <module>principal</module>
+    <module>autenticacao</module>
   </modules>
 
 </project>

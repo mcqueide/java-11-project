@@ -28,3 +28,8 @@ o comando `mvn spring-boot:run` na pasta raiz do projeto.
 `java-11-project/principal/src/main/resources/application.properties`, nele há 2 spring.datasource.url um comentado e 
 o outro não, um é para máquinas com o docker toolbox que roda o docker dentro de uma VM no virtual box e o outro é 
 para o sistemas operacionais que rodam o docker nativamente.
+
+1. Para adicionar um novo módulo na aplicação basta executar o comando na raiz do projeto:
+```
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+```
