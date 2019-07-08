@@ -5,7 +5,7 @@ networks:
 
 services:
   app:
-    image: java-11-project-cesar
+    image: java-13-project-alpine
     ports:
       - "8080:8080"
       - "5005:5005"
@@ -14,7 +14,7 @@ services:
         condition: service_healthy
     networks:
       - test
-    command: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=0.0.0.0:5005 -Djava.security.egd=file:/dev/./urandom -jar /project/principal-1.0-SNAPSHOT.jar
+    command: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=0.0.0.0:5005 -jar /project/principal-1.0-SNAPSHOT.jar
 
   db:
     image: opavlova/db-mysql:5.7-test
