@@ -35,6 +35,11 @@
       <artifactId>pessoa</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>br.com.arqdev</groupId>
+      <artifactId>swagger</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>

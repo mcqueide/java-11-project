@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Scope;
 
 @SpringBootApplication(scanBasePackages = {
             "br.com.arqdev.pessoa",
-            "br.com.arqdev.util"
+            "br.com.arqdev.util",
+            "br.com.arqdev.swagger"
         })
 public class Application {
 

@@ -64,6 +64,12 @@
         <artifactId>pessoa</artifactId>
         <version>${project.version}</version>
       </dependency>
+
+      <dependency>
+        <groupId>br.com.arqdev</groupId>
+        <artifactId>swagger</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -214,6 +220,7 @@
     <module>util</module>
     <module>principal</module>
     <module>autenticacao</module>
+    <module>swagger</module>
   </modules>
 
 </project>
