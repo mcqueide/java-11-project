@@ -1,4 +1,4 @@
-package br.com.arqdev.pessoa.dto;
+package br.com.arqdev.autenticacao.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,9 +9,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class TelefoneDto {
+public class UsuarioPerfilDto {
 
     private Integer id;
-    private String numero;
 
+    private UsuarioDto usuario;
+
+    private PerfilDto perfil;
 }

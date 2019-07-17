@@ -18,6 +18,10 @@
       <groupId>br.com.arqdev</groupId>
       <artifactId>util</artifactId>
     </dependency>
+    <dependency>
+      <groupId>br.com.arqdev</groupId>
+      <artifactId>autenticacao</artifactId>
+    </dependency>
   </dependencies>
   
 </project>

@@ -1,21 +1,21 @@
 package br.com.arqdev.autenticacao.modelo;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import br.com.arqdev.pessoa.entity.Pessoa;
 
 @Entity
 @Table(name = "usuario")
@@ -35,11 +35,8 @@ public class Usuario {
 
     private String senha;
 
-    @OneToOne(mappedBy = "usuario")
-    private Pessoa pessoa;
-
-    @OneToMany(mappedBy = "usuario")
-    private List<UsuarioPerfil> usuarioPerfis;
+    @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
+    private Set<UsuarioPerfil> usuarioPerfis;
 
     public List<Perfil> getPerfis() {
         return usuarioPerfis.stream().map(up -> up.getPerfil()).collect(Collectors.toList());

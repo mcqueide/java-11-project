@@ -11,8 +11,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import br.com.arqdev.autenticacao.modelo.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -39,4 +41,7 @@ public class Pessoa {
 
     @OneToMany(mappedBy="pessoa", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Telefone> telefones;
+    
+    @OneToOne
+    private Usuario usuario;
 }

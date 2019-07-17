@@ -47,6 +47,19 @@
         <version>1.0.6</version>
       </dependency>
 
+      <!-- JWT Token -->
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.9.1</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>br.com.arqdev</groupId>
+        <artifactId>autenticacao</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>br.com.arqdev</groupId>
         <artifactId>util</artifactId>
@@ -91,6 +104,16 @@
       <groupId>com.jayway.jsonpath</groupId>
       <artifactId>json-path</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <!-- Spring Security -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-test</artifactId>
     </dependency>
 
     <!--database drivers -->
