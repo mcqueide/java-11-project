@@ -1,19 +1,15 @@
 package br.com.arqdev.principal;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
 import br.com.arqdev.util.swagger.api.ApiInfoBuilder;
 import br.com.arqdev.util.swagger.api.Docket;
 import br.com.arqdev.util.swagger.documentation.DocumentationType;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
-
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 @EnableSwagger2
 @SpringBootApplication(scanBasePackages = {

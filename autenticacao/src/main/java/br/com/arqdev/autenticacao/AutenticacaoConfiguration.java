@@ -27,7 +27,7 @@ import br.com.arqdev.autenticacao.security.filters.JwtAuthenticationTokenFilter;
 @EnableAutoConfiguration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class AutenticacaoConfiguration extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private JwtAuthenticationEntryPoint unauthorizedHandler;
