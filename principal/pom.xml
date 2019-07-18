@@ -15,16 +15,6 @@
   <name>principal</name>
 
   <dependencies>
-    <!--dozer -->
-    <dependency>
-      <groupId>net.sf.dozer</groupId>
-      <artifactId>dozer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.craftsman</groupId>
-      <artifactId>dozer-jdk8-support</artifactId>
-    </dependency>
-
 	<dependency>
       <groupId>br.com.arqdev</groupId>
       <artifactId>autenticacao</artifactId>

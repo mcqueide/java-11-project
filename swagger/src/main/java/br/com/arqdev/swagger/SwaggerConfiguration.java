@@ -1,18 +1,21 @@
-package br.com.arqdev.swagger.config;
+package br.com.arqdev.swagger;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import br.com.arqdev.swagger.api.ApiInfoBuilder;
 import br.com.arqdev.swagger.api.Docket;
 import br.com.arqdev.swagger.documentation.DocumentationType;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {
+@EnableAutoConfiguration
+public class SwaggerConfiguration {
 
     @Value("${swagger.titulo:ADICIONE PROPRIEDADE swagger.titulo NO APPLICATION.PROPERTIES/YAML}")
     private String titulo;

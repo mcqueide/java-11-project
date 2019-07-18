@@ -1,5 +1,6 @@
 module br.com.arqdev.swagger {
-    requires spring.context;
+	requires spring.boot.autoconfigure;
+	requires spring.context;
     requires spring.beans;
     requires spring.web;
     requires spring.core;
@@ -12,4 +13,5 @@ module br.com.arqdev.swagger {
     requires com.fasterxml.classmate;
     requires tomcat.embed.core;
 
+    exports br.com.arqdev.swagger;
 }

@@ -20,9 +20,8 @@
       <artifactId>dozer</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>LATEST</version>
+      <groupId>io.craftsman</groupId>
+      <artifactId>dozer-jdk8-support</artifactId>
     </dependency>
   </dependencies>
 </project>
