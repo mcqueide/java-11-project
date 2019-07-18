@@ -3,6 +3,7 @@ package br.com.arqdev.autenticacao.modelo;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,6 +29,6 @@ public class Perfil {
 
     private String nome;
 
-    @OneToMany(mappedBy = "perfil")
+    @OneToMany(mappedBy = "perfil", fetch = FetchType.EAGER)
     private List<UsuarioPerfil> usuarioPerfil;
 }

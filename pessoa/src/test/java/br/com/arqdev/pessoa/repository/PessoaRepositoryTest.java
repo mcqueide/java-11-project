@@ -16,12 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import br.com.arqdev.pessoa.TestConfiguration;
+import br.com.arqdev.pessoa.PessoaTestConfiguration;
 import br.com.arqdev.pessoa.entity.Pessoa;
 import br.com.arqdev.pessoa.entity.Telefone;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=TestConfiguration.class)
+@SpringBootTest(classes=PessoaTestConfiguration.class)
 public class PessoaRepositoryTest {
 	
 	@Autowired
