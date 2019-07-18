@@ -1,5 +1,8 @@
 package br.com.arqdev.autenticacao;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -55,12 +58,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
+		String[] urlsSwagger = {"/v2/api-docs", "/swagger-resources/**", "/swagger-ui.html", "/webjars/**"};
+		String[] urlLogin = {"/auth/**"};
+		
 		httpSecurity.csrf().disable().exceptionHandling()
 				.authenticationEntryPoint(unauthorizedHandler).and()
 				.sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and().authorizeRequests()
-				.antMatchers("/auth/**")
+				.antMatchers(Stream.of(urlsSwagger, urlLogin)
+						.flatMap(Arrays::stream)
+						.toArray(String[]::new))
 				.permitAll().anyRequest().authenticated();
 		
 		httpSecurity.addFilterBefore(authenticationTokenFilterBean(), 

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    container_name: mysql_arq_dev_java_11_project
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
